@@ -16,10 +16,10 @@ def post_text():
 
     # fake to create random company and c
     company = fake.company()
-    company_type = fake.company_suffix()
+    slogan = fake.catch_phrase()
     response = {
         "Company": company,
-        "Type": company_type
+        "Slogan": slogan
     }
     # return name and email as a JSON httpresponse using jsonify
     return jsonify(response)
