@@ -14,7 +14,7 @@ def get_text():
 @app.route('/upper/text', methods=['POST'])
 def post_text():
 
-    # fake to create random company and c
+    # fake to create random company and slogan
     company = fake.company()
     slogan = fake.catch_phrase()
     response = {

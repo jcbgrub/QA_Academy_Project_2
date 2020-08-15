@@ -5,3 +5,4 @@ Werkzeug==1.0.0
 tree
 Flask
 Jinja2==2.11.2
+pytest
