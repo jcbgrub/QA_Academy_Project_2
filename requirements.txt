@@ -1,5 +1,7 @@
 faker
 Nginx 
-Flask==1.1.1
 gunicorn==20.0.4
 Werkzeug==1.0.0
+tree
+Flask
+Jinja2==2.11.2
