@@ -1,16 +1,28 @@
-from flask import Flask, Response, request
+from flask import Flask, Response, request, jsonify
+from faker import Faker
 
+# Initialize a faker generator.
+fake = Faker()
+
+# Create the app object.
 app = Flask(__name__)
 
 @app.route('/text', methods=['GET'])
 def get_text():
-    return Response("This is my first API", mimetype='text/plain')
+    return Response("whatevver", mimetype='text/plain')
 
 @app.route('/upper/text', methods=['POST'])
 def post_text():
-    data_sent = request.data.decode('utf-8')
-    upper_data = data_sent.upper()
-    return Response("This is the data you sent to the API but in upper case: " + upper_data, mimetype='text/plain')
+
+    # fake to create random company and c
+    company = company()
+    company_type = company_suffix()
+    response = {
+        "Company": company,
+        "Type": company_type
+    }
+    # return name and email as a JSON httpresponse using jsonify
+    return jsonify(response)
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True, host='0.0.0.0')
