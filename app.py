@@ -15,8 +15,8 @@ def get_text():
 def post_text():
 
     # fake to create random company and c
-    company = company()
-    company_type = company_suffix()
+    company = fake.company()
+    company_type = fake.company_suffix()
     response = {
         "Company": company,
         "Type": company_type
