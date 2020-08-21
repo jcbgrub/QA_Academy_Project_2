@@ -8,5 +8,5 @@ import random
 @app.route('/get_name',methods=['GET'])
 def get_name():
     name = ['Keynes','Friedrich','Liebknecht','Vladimir','Rosa']
-    name = name_four[random.randint(0,4)]
+    name = name[random.randint(0,4)]
     return Response(name,mimetype='text/plain')
