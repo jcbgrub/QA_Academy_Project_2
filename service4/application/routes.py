@@ -3,18 +3,17 @@ import requests
 from application import app
 import random
 
-@app.route('/get/email', methods=['GET'])
-def email():
-    response_name_four = requests.get('http://api:5001/get/get_name_four')
-    response_name_five = requests.get('http://api:5001/get/get_name_five')
-    response_num_one = requests.get('http://api:5002/get/get_num_one')
-    response_num_two = requests.get('http://api:5002/get/get_num_two')
-
-    if response.text == "1":
-        return "Football"
-    elif response.text == "2":
-        return "Badminton"
-    elif response.text == "3":
-        return "Hockey"
-    else:
-        return "Out of Range"
+@app.route('/get_email', methods=['GET','POST'])
+def get_email():
+	response_name = requests.get('http://api:5001/get_name')
+	response_number = requests.get('http://api:5002/get_number')
+	emailname = response_name.text+response_number.text
+	if len(emailname) >= 5:
+		response_name+"@sputnik.com"
+	elif len(emailname) >= 7:
+		response_name+"@cosmonaut.com"
+	elif response.text == 10:
+		response_name+"@spacerocket.com"
+	else:
+		'this should not be here'
+	return Response(emailname,mimetype='text/plain ')

@@ -5,4 +5,4 @@ from datetime import datetime
 
 class email(db.Model):
 	id = db.Column(db.Integer, primary_key=True,autoincrement=True)
-	email = db.Column(db.String(30), nullable=False)
+	gen_email = db.Column(db.String(30), nullable=False)
