@@ -10,4 +10,3 @@ Werkzeug==0.16.1
 requests
 flask_sqlalchemy
 pymysql
-
