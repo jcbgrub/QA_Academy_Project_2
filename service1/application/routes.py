@@ -11,7 +11,7 @@ def home():
 
 # Getting Email from Service
 @app.route('/')
-@app.route('/generate',methods=['GET'])
+@app.route('/generate',methods=['GET','POST'])
 def generate():
     # Response request
     response_name = requests.get('http://service2:5001/get_name')
