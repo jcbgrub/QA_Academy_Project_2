@@ -1,8 +1,14 @@
-<head>
-    <title>Email Generator</title>
-</head>
   
-<body>
-    <p>Hello and Welcome, generate your email address by clicking <a href="{{ url_for('generate'}}"> here.</a></p>
-</body>
-  
+<p><h1>Generated Emails</h1></p>
+{% if email %}
+{% for entry in email %}
+	<div>
+		<h3>{{ email.title }}</h3>
+		<p> 
+        - ID:</b>{{ entry.id }}
+		- Email:</b>{{ entry.gen_email }}
+		</p>
+	</div>
+{% endfor %}
+{% endif %}
+{% endblock %
