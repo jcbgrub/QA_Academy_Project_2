@@ -1,4 +1,5 @@
   
+{% block body_content %}
 <p><h1>Generated Emails</h1></p>
 {% if email %}
 {% for entry in email %}
@@ -11,4 +12,4 @@
 	</div>
 {% endfor %}
 {% endif %}
-{% endblock %
+{% endblock %}
