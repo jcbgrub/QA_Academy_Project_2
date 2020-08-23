@@ -5,7 +5,7 @@ import random
 from application.models import email
 
 @app.route('/')
-@app.route('/home',,methods=['GET'])
+@app.route('/home',methods=['GET'])
 def home():
 	emailData = email.query.all()
 	return render_template('home.html', title='Home',email=emailData)
