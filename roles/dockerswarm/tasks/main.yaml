@@ -8,8 +8,8 @@
     - curl
     - gnupg-agent
     - software-properties-common
-  state: latest
-  update_cache: true
+    state: latest
+    update_cache: true
 
 - name: pip uninstall docker-py    
   pip:
