@@ -37,8 +37,8 @@
     - docker-ce
     - docker-ce-cli
     - containerd.io
-  state: latest
-  update_cache: true
+    state: latest
+    update_cache: true
 
 - name: "Add user to docker group"
   user:
