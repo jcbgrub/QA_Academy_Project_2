@@ -2,6 +2,7 @@
   apt:
     pkg:
     - python3
+    - git
     - python3-pip
     - apt-transport-https
     - ca-certificates
@@ -45,3 +46,5 @@
     name: "{{ ansible_user }}"
     group: docker
     state: present
+
+
