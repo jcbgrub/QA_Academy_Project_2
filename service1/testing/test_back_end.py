@@ -54,4 +54,4 @@ class Test_Service1(TestBase):
 		response = self.client.get(url_for("home"))
 		self.assertEqual(response.status_code, 200)
 		print(response.data)
-		self.assertIn(b"generate", response.data)
+		self.assertIn(b"All Emails", response.data)
