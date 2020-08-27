@@ -1,5 +1,6 @@
 version: "3.7"
 services:
+  # building service 1 and DB
   service1:
     build: ./service1
     ports:
@@ -9,24 +10,28 @@ services:
     environment:
       DATABASE_URI: ${DATABASE_URI}
       SECRET_KEY: ${SECRET_KEY}
+  # building service 2
   service2: 
     build: ./service2
     ports: 
       - target: 5001
         published: 5001
         protocol: tcp
+  # building service 3
   service3: 
     build: ./service3
     ports: 
       - target: 5002
         published: 5002
         protocol: tcp
+  # building service 4
   service4: 
     build: ./service4
     ports: 
       - target: 5003
         published: 5003
         protocol: tcp
+  # building database variables using .env
   database:
     image: mysql:5.7
     ports:
