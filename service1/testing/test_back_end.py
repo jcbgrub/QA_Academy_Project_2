@@ -37,20 +37,20 @@ class TestBase(TestCase):
 
 class Test_Service1(TestBase):
 	def test_generate_view(self):
-		response = self.client.get(url_for("generate_view"))
+		response = self.client.get(url_for("home"))
 		self.assertEqual(response.status_code, 200)
-		self.assertIn(b"Team Name", response.data)
+		self.assertIn(b"All Emails", response.data)
 	
-	def test_generate_teams(self):
+	def test_generate_email(self):
 		with patch('requests.get') as g:
 			g.return_value.text = 'Rosa'
 			with patch('requests.post') as p:
 			  p.return_value.text = '5'
 			  response = self.client.get(url_for("generate"))
 			  self.assertEqual(response.status_code, 200)
-			  self.assertIn(b"Team Name", response.data)
+			  self.assertIn(b"Rosa5", response.data)
 
-	def test_view_teams(self):
+	def test_view_emails(self):
 		response = self.client.get(url_for("home"))
 		self.assertEqual(response.status_code, 200)
 		print(response.data)
