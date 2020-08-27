@@ -6,13 +6,14 @@ import random
 @app.route('/get_email', methods=['GET','POST'])
 def get_email():
 	emailname = request.data.decode('utf-8')
-	if len(emailname) >= 5:
+	if len(emailname) >= 5 and len(emailname) <= 7:
 		emailname = emailname+"@sputnik.com"
-	elif len(emailname) >= 7:
+	elif len(emailname) >= 8 and len(emailname) <= 10:
 		emailname = emailname+"@cosmonaut.com"
-	elif response.text == 10:
+	elif response.text >= 11:
 		emailname = emailname+"@spacerocket.com"
 	else:
 		'this should not be here'
-	return Response(emailname,mimetype='text/plain ')
+	# return Response(emailname,mimetype='text/plain ')
+	return emailname
 
