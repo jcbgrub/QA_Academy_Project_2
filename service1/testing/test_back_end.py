@@ -1,9 +1,9 @@
 import unittest
-from Flask import url_for
+from flask import url_for
 from os import getenv
 from unittest.mock import patch
 from flask_testing import TestCase
-from application import app,db
+from application import app, db
 from application.models import email
 
 class TestBase(TestCase):
