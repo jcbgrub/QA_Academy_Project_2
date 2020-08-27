@@ -24,7 +24,7 @@ class TestBase(TestCase):
 		# Creating a test team
 		testemail = email(
 			id = 1,
-			gen_name = "test12@test.com"
+			gen_email = "test12@test.com"
 		)
 		# save team to database
 		db.session.add(testemail)
@@ -48,7 +48,7 @@ class Test_Service1(TestBase):
 			  p.return_value.text = '5'
 			  response = self.client.get(url_for("generate"))
 			  self.assertEqual(response.status_code, 200)
-			  self.assertIn(b"Rosa5", response.data)
+			  self.assertIn(b"All Emails", response.data)
 
 	def test_view_emails(self):
 		response = self.client.get(url_for("home"))

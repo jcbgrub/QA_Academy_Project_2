@@ -1,0 +1,18 @@
+#  init swarm
+- name: Initialise Docker Swarm
+  docker_swarm:
+    state: present
+# register new token
+- name: Inspect Swarm
+  docker_swarm:
+    state: inspect
+  register: swarm_token
+#  check if notes are there
+- name: Inspect Swarm Nodes
+  docker_swarm_token:
+    nodes: yes
+# export variable.
+- name: Export Variable
+  add_host:
+    name: "join_token"
+    value: "{{ swarm_token.swarm_facts.JoinTokens.Worker }}"
