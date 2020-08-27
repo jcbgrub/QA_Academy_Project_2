@@ -3,6 +3,7 @@ services:
   # building service 1 and DB
   service1:
     build: ./service1
+    image: sch0tterfoinfoin/service1
     ports:
       - target: 5000
         published: 5000
@@ -15,6 +16,7 @@ services:
   # building service 2
   service2: 
     build: ./service2
+    image: sch0tterfoinfoin/service2
     ports: 
       - target: 5001
         published: 5001
@@ -24,6 +26,7 @@ services:
   # building service 3
   service3: 
     build: ./service3
+    image: sch0tterfoinfoin/service3
     ports: 
       - target: 5002
         published: 5002
@@ -33,6 +36,7 @@ services:
   # building service 4
   service4: 
     build: ./service4
+    image: sch0tterfoinfoin/service4
     ports: 
       - target: 5003
         published: 5003
@@ -48,15 +52,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: emaildb
-    volumes:
-      - type: volume
-        source: database-volume
-        target: /var/lib/mysql
-  database2:
-    extends: database for testing
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: emaildbtest
     volumes:
       - type: volume
         source: database-volume
