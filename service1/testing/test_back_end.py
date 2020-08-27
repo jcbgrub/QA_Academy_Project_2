@@ -1,5 +1,5 @@
 import unittest
-# from Flask import url_for
+from Flask import url_for
 from os import getenv
 from unittest.mock import patch
 from flask_testing import TestCase
