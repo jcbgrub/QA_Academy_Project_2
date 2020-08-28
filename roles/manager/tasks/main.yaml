@@ -1,10 +1,10 @@
 # clone git 
-- name: git update
-  git:
-    repo: https://github.com/jcbgrub/SFIA_Project_2.git
-    dest: /home/jenkins/
-    clone: yes
-    update: yes
+# - name: git update
+#   git:
+#     repo: https://github.com/jcbgrub/SFIA_Project_2.git
+#     # dest: /home/jenkins/
+#     clone: no
+#     update: yes
 
 #  init swarm
 - name: Initialise Docker Swarm
