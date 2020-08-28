@@ -1,6 +1,6 @@
 #! /bin/bash
 # docker
-sudo chmod 666 /var/run/docker.sock
+# sudo chmod 666 /var/run/docker.sock
 # export SECRET_KEY=${SECRET_KEY} 
 # export DATABASE_URI=${DATABASE_URI}
 
