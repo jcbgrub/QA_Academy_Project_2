@@ -1,7 +1,8 @@
 #! /bin/bash
 # docker
-export SECRET_KEY=${SECRET_KEY} 
-export DATABASE_URI=${DATABASE_URI}
+sudo chmod 666 /var/run/docker.sock
+# export SECRET_KEY=${SECRET_KEY} 
+# export DATABASE_URI=${DATABASE_URI}
 
 docker-compose down --rmi all
 docker-compose build
