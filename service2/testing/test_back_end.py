@@ -12,7 +12,7 @@ class TestBase(TestCase):
 
 class TestResponse(TestBase):
     def test_email_name(self):
-        with patch('random.randrange') as r:
+        with patch('random.randint') as r:
             r.return_value = 1
             response = self.client.get(url_for('get_name'))
             self.assertIn(b'Friedrich', response.data)
