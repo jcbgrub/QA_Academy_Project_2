@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block body_content %}
 <h1>All Emails</h1>
-{% email.title %}
+{% if email %}
 {% for entry in email %}
 	<div>
 		<h3>{{ email.title }}</h3>
