@@ -2,7 +2,7 @@
 - name: git update
   git:
     repo: https://github.com/jcbgrub/SFIA_Project_2.git
-    dest: /home/
+    # dest: /home/
     update: yes
 
 #  init swarm
