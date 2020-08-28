@@ -14,7 +14,7 @@ class TestResponse(TestBase):
 	# We will mock a response of 1 and test that we get football returned.
 		with patch('requests.get') as g:
 			g.return_value.text = "test12"
-			response = self.client.post(url_for('get_email'))
+			response = self.client.get(url_for('get_email'))
 			self.assertIn(b'test12@sputnik.com', response.data)
 
 
