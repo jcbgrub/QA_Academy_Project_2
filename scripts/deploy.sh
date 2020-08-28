@@ -1,3 +1,4 @@
+#! /bin/bash
 ssh sfia-manager << EOF
 cd SFIA-PROJECT_2/
 export SECRET_KEY=${SECRET_KEY} 
