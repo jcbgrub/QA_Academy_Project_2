@@ -2,8 +2,8 @@
 - name: git update
   git:
     repo: https://github.com/jcbgrub/SFIA_Project_2.git
-    # dest: /home/
-    clone: no
+    dest: /home/jenkins/
+    clone: yes
     update: yes
 
 #  init swarm
