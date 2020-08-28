@@ -1,21 +1,24 @@
 pipeline {
     agent any 
     stages{
-        stage('Build'){
+        stage('Configure'){
             steps{
-                sh './scripts/build.sh'
-            }        
+                sh './scripts/configure.sh'
+            }
         }
         stage('Test'){
             steps{
-                sh './scripts/test_services.sh'
+                sh './scripts/test.sh'
+            }
+        }
+        stage('Build'){
+            steps{
+                sh './scripts/build.sh'
             }
         }
         stage('Deploy'){
             steps{
                 sh './scripts/deploy.sh'
             }
-        }
-    }
-                   
+        }                   
 }
