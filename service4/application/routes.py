@@ -10,7 +10,7 @@ def get_email():
 		emailname = emailname+"@sputnik.com"
 	elif len(emailname) >= 8 and len(emailname) <= 10:
 		emailname = emailname+"@cosmonaut.com"
-	elif response.text >= 11:
+	elif len(emailname) >= 11:
 		emailname = emailname+"@spacerocket.com"
 	else:
 		'this should not be here'
