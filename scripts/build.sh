@@ -10,7 +10,3 @@ docker-compose down --rmi all
 docker-compose build
 sudo docker login 
 sudo docker-compose push 
-# sudo docker push sch0tterfoinfoin/service1:latest
-# sudo docker push sch0tterfoinfoin/service2:latest
-# sudo docker push sch0tterfoinfoin/service3:latest
-# sudo docker push sch0tterfoinfoin/service4:latest
