@@ -6,6 +6,7 @@ import random
 #  generate random number 1-99
 @app.route('/get_number',methods=['GET'])
 def get_number():
-    number = number[random.randint(0,100)]
-    return Response(number,mimetype='text/plain')
+    number = random.randint(0,100)
+    # return Response(number,mimetype='text/plain')
+    return str(number)
  

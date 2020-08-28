@@ -1,0 +1,28 @@
+# clone git 
+- name: git update
+  git:
+    repo: https://github.com/jcbgrub/SFIA_Project_2.git
+    dest: /home/
+    update: yes
+
+#  init swarm
+- name: Initialise Docker Swarm
+  docker_swarm:
+    state: present
+
+# register new token
+- name: Inspect Swarm
+  docker_swarm:
+    state: inspect
+  register: swarm_info
+  
+#  check if notes are there
+- name: Inspect Swarm Nodes
+  docker_swarm_info:
+    nodes: yes
+
+# export variable.
+- name: Export Variable
+  add_host:
+    name: "join_token"
+    value: "{{ swarm_info.swarm_facts.JoinTokens.Worker }}"

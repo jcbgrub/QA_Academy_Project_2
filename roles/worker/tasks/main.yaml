@@ -1,0 +1,19 @@
+#  leave if not already part of the note
+- name: Leave Docker Swarm
+  docker_swarm:
+    state: absent
+    force: true
+
+- name: Join Swarm Worker1
+  docker_swarm:
+    state: join
+    advertise_addr: sfia-worker-1
+    join_token: "{{ hostvars['join_token']['value'] }}"
+    remote_addrs: [ "sfia-manager:2377" ] 
+
+- name: Join Swarm Worker2
+  docker_swarm:
+    state: join
+    advertise_addr: sfia-worker-2
+    join_token: "{{ hostvars['join_token']['value'] }}"
+    remote_addrs: [ "sfia-manager:2377" ] 

@@ -1,5 +1,6 @@
-  
-<p><h1>Generated Emails</h1></p>
+{% extends "layout.html" %}
+{% block body_content %}
+<p><h1>All Emails</h1></p>
 {% if email %}
 {% for entry in email %}
 	<div>
@@ -11,4 +12,4 @@
 	</div>
 {% endfor %}
 {% endif %}
-{% endblock %
+{% endblock %}
