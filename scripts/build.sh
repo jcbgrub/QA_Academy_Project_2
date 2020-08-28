@@ -9,7 +9,7 @@ export TEST_DATABASE_URI=${TEST_DATABASE_URI}
 docker-compose down --rmi all
 docker-compose build
 sudo docker login 
-docker push ch0tterfoinfoin/service1:latest
-docker push ch0tterfoinfoin/service2:latest
-docker push ch0tterfoinfoin/service3:latest
-docker push ch0tterfoinfoin/service4:latest
+docker push sch0tterfoinfoin/service1:latest
+docker push sch0tterfoinfoin/service2:latest
+docker push sch0tterfoinfoin/service3:latest
+docker push sch0tterfoinfoin/service4:latest
