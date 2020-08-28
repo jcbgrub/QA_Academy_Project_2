@@ -11,29 +11,25 @@ class TestBase(TestCase):
 class TestResponse(TestBase):
 
 	def test_sputnik(self):
-	# We will mock a response of 1 and test that we get football returned.
 		with patch('requests.get') as g:
 			g.return_value.text = "test12"
 			response = self.client.post(url_for('get_email'),data='test12')
 			self.assertIn(b'test12@sputnik.com', response.data)
 
-    # def test_team_slogan(self): 
-    #     with patch('requests.get') as i:
-    #             i.return_value.text = 'London'
-    #             with patch('random.randrange') as r:
-    #                 r.return_value = 1
-    #                 response = self.client.post(
-    #                 url_for('get_slogan'),
-    #                 data = 'London')
-    #                 self.assertIn(b'Win from Within.', response.data)
+	def test_cosmonaut(self):
+		with patch('requests.get') as g:
+			g.return_value.text = "test1234"
+			response = self.client.post(url_for('get_email'),data='test1234')
+			self.assertIn(b'test1234@cosmonaut.com', response.data)
 
+	def test_spacerocket(self):
+		with patch('requests.get') as g:
+			g.return_value.text = "test12345678"
+			response = self.client.post(url_for('get_email'),data='test12345678')
+			self.assertIn(b'test12345678@spacerocket.com', response.data)
 
-		#         def test_team_slogan(self): 
-		# with patch('requests.get') as i:
-		#         i.return_value.text = 'London'
-		#         with patch('random.randrange') as r:
-		#             r.return_value = 1
-		#             response = self.client.post(
-		#             url_for('get_slogan'),
-		#             data = 'London')
-		#             self.assertIn(b'Win from Within.', response.data)
+	def test_else(self):
+		with patch('requests.get') as g:
+			g.return_value.text = "3"
+			response = self.client.post(url_for('get_email'),data='3')
+			self.assertIn(b'this should not be here', response.data)
