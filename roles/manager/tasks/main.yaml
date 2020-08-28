@@ -1,14 +1,9 @@
-# - name: install Git
-#   apt:
-#   - git
-#     state: latest
-#     update_cache: true
-
 # clone git 
-- name: clone git
+- name: git update
   git:
     repo: https://github.com/jcbgrub/SFIA_Project_2.git
-    dest: 
+    dest: /home/
+    update: yes
 
 #  init swarm
 - name: Initialise Docker Swarm

@@ -20,7 +20,7 @@
 - name: pip reinstall docker    
   pip:
     name: docker
-    state: forcereinstall
+    state: latest
 
 - name: 'add GPG key'
   apt_key:
