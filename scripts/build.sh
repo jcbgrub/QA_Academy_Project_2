@@ -8,5 +8,5 @@ export TEST_DATABASE_URI=${TEST_DATABASE_URI}
 
 docker-compose down --rmi all
 docker-compose build
-docker login 
+sudo docker login 
 docker-compose push
