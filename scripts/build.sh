@@ -4,5 +4,5 @@ export SECRET_KEY=${SECRET_KEY}
 export DATABASE_URI=${DATABASE_URI} 
 sudo docker-compose down --rmi all
 sudo docker-compose build
-sudo docker push
+sudo docker-compose push
 
