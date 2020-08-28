@@ -24,12 +24,12 @@ class TestResponse(TestBase):
 
 	def test_spacerocket(self):
 		with patch('requests.get') as g:
-			g.return_value.text = "test12345678"
-			response = self.client.post(url_for('get_email'),data='test12345678')
-			self.assertIn(b'test12345678@spacerocket.com', response.data)
+			g.return_value.text = "test1234567"
+			response = self.client.post(url_for('get_email'),data='test1234567')
+			self.assertIn(b'test1234567@spacerocket.com', response.data)
 
 	def test_else(self):
 		with patch('requests.get') as g:
 			g.return_value.text = "3"
-			response = self.client.post(url_for('get_email'),data='3')
+			# response = self.client.post(url_for('get_email'),data='3')
 			self.assertIn(b'this should not be here', response.data)
