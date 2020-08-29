@@ -10,3 +10,5 @@ def get_name():
 	name = name[random.randint(0,4)]
 	# return Response(name,mimetype='text/plain')
 	return name
+
+	
