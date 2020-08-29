@@ -1,4 +1,6 @@
 #! /bin/bash
+# docker
+# sudo chmod 666 /var/run/docker.sock
 
 # exports the environment variables as a test
 export SECRET_KEY=${SECRET_KEY} 
