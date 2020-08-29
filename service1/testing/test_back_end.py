@@ -40,7 +40,7 @@ class Test_Service1(TestBase):
 		response = self.client.get(url_for("home"))
 		self.assertEqual(response.status_code, 200)
 		self.assertIn(b"All Emails", response.data)
-	
+# test if email generator works 
 	def test_generate_email(self):
 		with patch('requests.get') as g:
 			g.return_value.text = 'Rosa'
@@ -50,6 +50,7 @@ class Test_Service1(TestBase):
 			  self.assertEqual(response.status_code, 200)
 			  self.assertIn(b"All Emails", response.data)
 
+# test if view emails page is working
 	def test_view_emails(self):
 		response = self.client.get(url_for("home"))
 		self.assertEqual(response.status_code, 200)
