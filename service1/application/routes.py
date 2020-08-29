@@ -26,4 +26,4 @@ def generate():
 	db.session.add(db_email)
 	db.session.commit()
 
-	return render_template('home.html',title='Your Email',email1=email1)
+	return render_template('generate.html',title='Your Email',email1=email1)
