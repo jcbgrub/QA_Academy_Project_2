@@ -5,7 +5,7 @@ import requests
 import random
 
 #generates a the name of a random name with 4 letters 
-@app.route('/get_name',methods=['GET'])
+@app.route('/get_name1',methods=['GET'])
 def get_name():
     name = ['Keynes','Friedrich','Liebknecht','Vladimir','Rosa']
     name = name[random.randint(0,4)]

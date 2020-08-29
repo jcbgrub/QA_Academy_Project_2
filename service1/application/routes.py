@@ -12,11 +12,11 @@ def home():
 
 # Getting Email from Service
 @app.route('/')
-@app.route('/generate',methods=['GET','POST'])
+@app.route('/generate1',methods=['GET','POST'])
 def generate():
 	# Response request
-	response_name = requests.get('http://service2:5001/get_name')
-	response_number = requests.get('http://service3:5002/get_number')
+	response_name = requests.get('http://service2:5001/get_name1')
+	response_number = requests.get('http://service3:5002/get_number1')
 	emailname = response_name.text+response_number.text
 
 	email1 = requests.post('http://service4:5003/get_email',data=emailname)
