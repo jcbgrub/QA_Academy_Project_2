@@ -15,4 +15,4 @@ class TestResponse(TestBase):
         with patch('random.randint') as r:
             r.return_value = 1
             response = self.client.get(url_for('get_name'))
-            self.assertIn(b'FRIEDRICH', response.data)
+            self.assertIn(b'Friedrich', response.data)
