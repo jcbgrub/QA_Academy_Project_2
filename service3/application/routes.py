@@ -13,6 +13,6 @@ import random
  #  generate random number 10 and 100 by 5
 @app.route('/get_number',methods=['GET'])
 def get_number():
-    number = random.randint(10,100,5)
+    number = random.randint(666,6666)
     # return Response(number,mimetype='text/plain')
     return str(number)
