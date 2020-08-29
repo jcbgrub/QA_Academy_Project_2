@@ -3,6 +3,7 @@ from application import app, db
 from application.models import email
 import requests
 
+# home route to display all entryies in the db
 @app.route('/')
 @app.route('/home',methods=['GET'])
 def home():

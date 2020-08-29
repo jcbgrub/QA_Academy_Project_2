@@ -1,4 +1,5 @@
 #! /bin/bash
+# SSH to the manager, clone GIT hub, export environment variables, deploy docker stock and remove git repo afterwards
 ssh sfia-manager << EOF
 git clone https://github.com/jcbgrub/SFIA_Project_2.git
 cd SFIA_Project_2/

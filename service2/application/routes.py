@@ -17,5 +17,6 @@ import random
 def get_name():
     name = ['KEYNES','FRIEDRICH','LIEBKNECHT','VLADIMIR','ROSA']
     name = name[random.randint(0,4)]
+    
     # return Response(name,mimetype='text/plain')
     return name

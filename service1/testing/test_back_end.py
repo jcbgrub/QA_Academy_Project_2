@@ -36,10 +36,12 @@ class TestBase(TestCase):
 		db.drop_all()
 
 class Test_Service1(TestBase):
+# test if generate email view works.
 	def test_generate_view(self):
 		response = self.client.get(url_for("home"))
 		self.assertEqual(response.status_code, 200)
 		self.assertIn(b"All Emails", response.data)
+
 # test if email generator works 
 	def test_generate_email(self):
 		with patch('requests.get') as g:
