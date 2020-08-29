@@ -13,6 +13,6 @@ import random
  #  generate random number 11-111 interating by 11
 @app.route('/get_number',methods=['GET'])
 def get_number():
-    number = random.randint(11,111,11)
+    number = random.randint(10,100,5)
     # return Response(number,mimetype='text/plain')
     return str(number)
