@@ -4,7 +4,7 @@ import requests
 
 import random
 
-# generates a the name of a random name  
+# generates a random name  
 @app.route('/get_name',methods=['GET'])
 def get_name():
     name = ['Keynes','Friedrich','Liebknecht','Vladimir','Rosa']
@@ -12,7 +12,7 @@ def get_name():
     # return Response(name,mimetype='text/plain')
     return name
 
-#generates a the name of a random name in capital
+#generates a random name in capital
 # @app.route('/get_name',methods=['GET'])
 # def get_name():
 #     name = ['KEYNES','FRIEDRICH','LIEBKNECHT','VLADIMIR','ROSA']
