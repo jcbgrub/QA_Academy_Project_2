@@ -8,7 +8,6 @@ export TEST_DATABASE_URI=${TEST_DATABASE_URI}
 
 # first remove left over images
 docker-compose down --rmi all
-# build images and push to docker hub
 docker-compose build
 sudo docker login 
 sudo docker-compose push 
