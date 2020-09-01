@@ -78,13 +78,14 @@ The current sprint named **Release 1.1,** contains one epic which represent this
 
 This release all user stories have been completed apart from the user story Troubleshooting which deals with current bugs and errors in the application.
 
-![](RackMultipart20200901-4-urbb3b_html_cef80fddb6f4fccc.png)
+![Screenshot 2020-09-01 at 05 26 44](https://user-images.githubusercontent.com/45181318/91799607-4d1b5680-ec1f-11ea-954b-8c9db3e442ad.png)
 
 ## Current Release 1.1
 
 At this point there has been 1 release and 1 pre-release of the app. Release 1.1 was released on the 28th of August and satisfies MVP (Minimum Viable Product).
 
-![](RackMultipart20200901-4-urbb3b_html_42bf90ac376b6c33.png)
+![Screenshot 2020-09-01 at 06 51 00](https://user-images.githubusercontent.com/45181318/91799698-80f67c00-ec1f-11ea-98f5-98a39b407e30.png)
+
 
 To satisfy the requirements I developed a simple app which generates a random email. **Following the**  **service-orientated architecture application requirement,** the app is split into 4 services as the below diagram illustrates.
 
@@ -110,19 +111,17 @@ To satisfy the requirements I developed a simple app which generates a random em
 - Receives the email name and concatenates an email domain based on the attributes of that object.
 - Uses port 5003
 
-![](RackMultipart20200901-4-urbb3b_html_2586245efd8df8c9.png)
+![Screenshot 2020-09-01 at 06 51 33](https://user-images.githubusercontent.com/45181318/91799730-953a7900-ec1f-11ea-80c6-9fb085dcf8fb.png)
 
 ### User Interface
 
 In its current version the user uses a two-step approach when using the website. The user will land on the _Generate_ page which offers the possibility to generate a random email address by clicking a link (frigure1).
 
-![](RackMultipart20200901-4-urbb3b_html_9ebe4e0247c84d31.png)
+![Screenshot 2020-09-01 at 06 52 00](https://user-images.githubusercontent.com/45181318/91799763-a4b9c200-ec1f-11ea-8401-6b62458d8048.png)
 
 Afterwards the user can go to the _All Email_ page were a list of generated emails is found while the idem with last ID.
 
-![](RackMultipart20200901-4-urbb3b_html_5efe5aea577de06.png)
-
-##
+![Screenshot 2020-09-01 at 06 52 29](https://user-images.githubusercontent.com/45181318/91799803-b602ce80-ec1f-11ea-9eef-d4c1683e2659.png)
 
 ### Next Release Version 1.2
 
@@ -135,13 +134,13 @@ There are a number of improvements which will be included in the new
 
 The entire app is built and maintained using a Jenkins based CI Pipeline. As below figure1 illustrates. The source code Is based on **Python** and pushed/pulled to **Version Control Git** based on the user stories pushed/pulled from **JIRA.**
 
-![](RackMultipart20200901-4-urbb3b_html_59d43f4d25b6ed92.png) figure1
+![CI_Pipeline](https://user-images.githubusercontent.com/45181318/91799906-ea768a80-ec1f-11ea-87d1-3dcd15ed6045.png)
 
 Every push triggers the **Webhook** to Jenkins, is an open source automation server, which helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
 # 1
  Our Jenkins Pipeline is based on four stages: **Configure, Test, Build and Deploy (firgure2).**
 
-![](RackMultipart20200901-4-urbb3b_html_3355832ce6addb0b.png) figure2
+![Screenshot 2020-09-01 at 06 54 29](https://user-images.githubusercontent.com/45181318/91799932-fd895a80-ec1f-11ea-9c73-d120f1cfea0f.png)
 
 ### Configure
 
@@ -154,21 +153,14 @@ Swarm mode for Docker is a container orchestration tool exists natively for Dock
 
 For our purposes there is one Manager (sfia-manager) and two Workers (sfia-worker-1 and sfia-worker-2).
 
-![](RackMultipart20200901-4-urbb3b_html_fc26531d3e6aad88.png)
+![Screenshot 2020-09-01 at 06 54 49](https://user-images.githubusercontent.com/45181318/91799962-0aa64980-ec20-11ea-8165-c2a718aa6bfb.png)
 
-##
 
 ### Testing
 
 The second stage is testing. The main tool used for unit testing is **Pytest**. All services but servie1 have a 100% coverage. While servie1 has 97%. This percentual difference is due to the fact that I did not test to commits to the database. This could have been integrated but during the setup of the services framework I manually verified that all data is committed to the database. Below are the test reports.
 
-![](RackMultipart20200901-4-urbb3b_html_4b270ef373136ab7.png) service1
-
-![](RackMultipart20200901-4-urbb3b_html_2c4f926cacac87ad.png) service2
-
-![](RackMultipart20200901-4-urbb3b_html_d6ee97cd90a01c8e.png) service3
-
-![](RackMultipart20200901-4-urbb3b_html_63d0ca3a4aa1420e.png) service4
+![Screenshot 2020-09-01 at 06 55 38](https://user-images.githubusercontent.com/45181318/91800015-27428180-ec20-11ea-97e0-69eb1d2d49a2.png)
 
 ### Build
 
