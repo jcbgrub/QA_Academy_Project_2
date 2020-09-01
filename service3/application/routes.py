@@ -9,4 +9,3 @@ def get_number():
     number = random.randint(0,100)
     # return Response(number,mimetype='text/plain')
     return str(number)
- 

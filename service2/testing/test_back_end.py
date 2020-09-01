@@ -6,10 +6,10 @@ from flask_testing import TestCase
 from application import app
 
 class TestBase(TestCase):
-
     def create_app(self):
         return app
 
+# test for random name
 class TestResponse(TestBase):
     def test_email_name(self):
         with patch('random.randint') as r:

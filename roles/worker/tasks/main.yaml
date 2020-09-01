@@ -4,6 +4,7 @@
     state: absent
     force: true
 
+# join the swarm
 - name: Join Swarm Worker1
   docker_swarm:
     state: join
@@ -11,6 +12,7 @@
     join_token: "{{ hostvars['join_token']['value'] }}"
     remote_addrs: [ "sfia-manager:2377" ] 
 
+# join the swarm
 - name: Join Swarm Worker2
   docker_swarm:
     state: join
