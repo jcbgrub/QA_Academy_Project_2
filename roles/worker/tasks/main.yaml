@@ -8,7 +8,7 @@
 - name: Join Swarm Worker1
   docker_swarm:
     state: join
-    advertise_addr: sfia-worker-1
+    advertise_addr: qa-worker1
     join_token: "{{ hostvars['join_token']['value'] }}"
     remote_addrs: [ "sfia-manager:2377" ] 
 
@@ -16,6 +16,6 @@
 - name: Join Swarm Worker2
   docker_swarm:
     state: join
-    advertise_addr: sfia-worker-2
+    advertise_addr: qa-worker2
     join_token: "{{ hostvars['join_token']['value'] }}"
     remote_addrs: [ "sfia-manager:2377" ] 
