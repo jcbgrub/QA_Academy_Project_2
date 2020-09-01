@@ -179,7 +179,7 @@ Jacob Grub
 
 Thanks to Luke Benson and Harry Volker for their excellent mentoring.
 
-Thanks to A. for her
+Thanks to A. for her emotional support.
 
 ## Acknowledgements
 
