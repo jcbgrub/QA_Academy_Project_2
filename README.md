@@ -170,7 +170,6 @@ The next step in the pipeline builds containers using Docker. Compose for Docker
 
 The last step in the Pipeline, which pulls the latest version of our containers from Docker hub to get deployed to a live environment. Docker stack was used when in the manager node that allows for the management of a cluster of docker containers with the use of the docker swarm initiated in the configure stage. This docker stack used the images previously pushed to the chosen docker hub repository.
 
-##
 
 ## Author
 
