@@ -10,7 +10,7 @@
     state: join
     advertise_addr: qa-worker1
     join_token: "{{ hostvars['join_token']['value'] }}"
-    remote_addrs: [ "sfia-manager:2377" ] 
+    remote_addrs: [ "qa-manager:2377" ] 
 
 # join the swarm
 - name: Join Swarm Worker2
@@ -18,4 +18,4 @@
     state: join
     advertise_addr: qa-worker2
     join_token: "{{ hostvars['join_token']['value'] }}"
-    remote_addrs: [ "sfia-manager:2377" ] 
+    remote_addrs: [ "qa-manager:2377" ] 
