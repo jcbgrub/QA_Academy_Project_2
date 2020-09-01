@@ -1,5 +1,5 @@
 #! /bin/bash
-ssh sfia-manager << EOF
+ssh qa-manager << EOF
 git clone https://github.com/jcbgrub/SFIA_Project_2.git
 cd SFIA_Project_2/
 export SECRET_KEY=${SECRET_KEY} 
